@@ -11,14 +11,17 @@ const hotelSchema=new mongoose.Schema({
         type:Number
     },
     img:{
-        type:String
+        type:[String]
     },
     hotel_destination:{
         type:String
     },
     max_people:{
         type:Number
-    } 
+    },
+    hotel_description:{
+        type:String
+    }
 })
 
 module.exports=mongoose.model('Hotel',hotelSchema);
