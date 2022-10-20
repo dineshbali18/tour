@@ -18,3 +18,13 @@ exports.getUserBookings=(req,res)=>{
         return res.json(Bookings);
     })
 }
+
+exports.getAllBookings=(req,res)=>{
+    Bookings.find().exec((err,bookings)=>{
+        if(err){
+            return res.json("Bookings not found")
+        }
+        return res.json(bookings);
+    })
+}
+

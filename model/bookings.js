@@ -27,6 +27,10 @@ const bookingSchema=new mongoose.Schema({
     },
     to:{
         type:Date
+    },
+    status:{
+        type:String,
+        default:"Success"
     }
 })
 

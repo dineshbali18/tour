@@ -20,7 +20,7 @@ exports.getHotel=(req,res)=>{
 }
 
 exports.deleteHotel=(req,res)=>{
-    Hotel.deleteOne({id:req.params.hotelId}).exec((err,success)=>{
+    Hotel.deleteOne({_id:req.params.hotelId}).exec((err,success)=>{
         if(err){
             return res.json("Unable to perform delete operation")
         }

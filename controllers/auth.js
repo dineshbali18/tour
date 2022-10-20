@@ -89,3 +89,13 @@ exports.isAdmin = (req, res, next) => {
   }
   next();
 };
+
+exports.getNameByUserId=(req,res)=>{
+    User.find({_id:req.params.id}).exec((err,user)=>{
+      if(err){
+        return res.json("User not found")
+      }
+      let x=user[0].name;
+      res.json(x);
+    })
+}

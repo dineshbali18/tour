@@ -30,7 +30,7 @@ exports.getDestinations=(req,res)=>{
 }
 
 exports.deleteDestination=(req,res)=>{
-    Destinations.deleteOne({id:req.params.destinationId}).exec((err,success)=>{
+    Destinations.deleteOne({_id:req.params.destinationId}).exec((err,success)=>{
         if(err){
             return res.json("Unable to perform delete operation")
         }
